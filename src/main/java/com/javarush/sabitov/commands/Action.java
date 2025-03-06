@@ -38,6 +38,6 @@ public interface Action {
         } catch (IOException e) {
             throw new AppException(Const.INCORRECT_FILE + e.getMessage(), e);
         }
-        return new com.javarush.khmelov.entity.Result(ResultCode.OK, targetTextFile);
+        return new Result(ResultCode.OK, targetTextFile);
     }
 }
