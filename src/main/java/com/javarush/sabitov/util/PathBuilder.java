@@ -1,6 +1,6 @@
 package com.javarush.sabitov.util;
 
-import com.javarush.khmelov.constant.Const;
+import com.javarush.sabitov.constants.Const;
 
 import java.nio.file.Path;
 

@@ -1,10 +1,18 @@
 package com.javarush.sabitov;
 
+import com.javarush.sabitov.controllers.MainController;
+import com.javarush.sabitov.entity.Result;
+import com.javarush.sabitov.view.ConsoleApplication;
+import com.javarush.sabitov.view.Menu;
+
+import java.util.Scanner;
+
 public class ConsoleRunner {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        Application application = new Application();
-        Result result = application.run(args);
-        System.out.println(result);
+        Scanner scanner = new Scanner(System.in);
+        Menu menu = new Menu(scanner);
+        MainController mainController = new MainController();
+        ConsoleApplication consoleApplication = new ConsoleApplication(menu,mainController);
+        consoleApplication.run(args);
     }
 }
