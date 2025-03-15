@@ -33,6 +33,7 @@ public interface Messages {
             3. Exit
             """ + ANSI_RESET + LINE;
     String INCORRECT_SELECTION = "Incorrect selection";
+    String INCORRECT_INPUT = "Incorrect input - key can only be a number";
 
     String OK_FORMAT = ANSI_GREEN + """
                 Operation complete

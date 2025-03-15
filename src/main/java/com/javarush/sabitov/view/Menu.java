@@ -14,22 +14,36 @@ public class Menu {
 
     public String[] getArgs() {
         String action = getAction();
-        int actionIndex=0;
+        int actionIndex = 0;
         for (int i = 0; i < QUESTIONS.length; i++) {
             if ((QUESTIONS[i][0][0]).equals(action)) {
-                actionIndex=i;
+                actionIndex = i;
                 break;
             }
         }
-        String[] args= new String[QUESTIONS[actionIndex].length];
-        args[0]=action;
+        String[] args = new String[QUESTIONS[actionIndex].length];
+        args[0] = action;
         for (int i = 1; i < args.length; i++) {
             String quest = QUESTIONS[actionIndex][i][0];
             System.out.println(quest);
             String answer = scanner.nextLine();
+            if (i == 3) {
+                parseInt(quest,answer);
+            }
             args[i] = answer;
         }
         return args;
+    }
+
+    private void parseInt(String question, String answer) {
+        try {
+            Integer.parseInt(answer);
+        } catch (NumberFormatException e) {
+            System.out.println(INCORRECT_INPUT);
+            System.out.println(question);
+            answer = scanner.nextLine();
+            parseInt(question, answer);
+        }
     }
 
     private String getAction() {
