@@ -1,5 +1,6 @@
 package com.javarush.sabitov.controllers;
 
+import com.javarush.sabitov.commands.Exit;
 import com.javarush.sabitov.constants.Const;
 import com.javarush.sabitov.entity.Result;
 import com.javarush.sabitov.commands.Action;
@@ -14,6 +15,8 @@ public class MainController {
         currentAction = switch (action) {
             case Const.ENCODE -> new Encoder();
             case Const.DECODE -> new Decoder();
+            case Const.EXIT -> new Exit();
+
             default -> throw new IllegalStateException("Unexpected value: " + action);
         };
         try {

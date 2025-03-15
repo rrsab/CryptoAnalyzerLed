@@ -16,6 +16,9 @@ public interface Messages {
                     {"Enter source (full path OR only filename, example encrypted.txt) :"},
                     {"Enter destination (full path OR only filename, example decrypted.txt) :"},
                     {"Enter key :"},
+            },
+            {
+                    {Const.EXIT},
             }
     };
 

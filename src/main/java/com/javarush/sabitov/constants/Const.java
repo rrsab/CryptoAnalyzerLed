@@ -5,6 +5,7 @@ import java.io.File;
 public interface Const {
     String ENCODE = "encrypt";
     String DECODE = "decrypt";
+    String EXIT = "exit";
 
 
     String TXT_FOLDER = System.getProperty("user.dir") +
@@ -12,8 +13,6 @@ public interface Const {
             "text" +
             File.separator;
 
-    String NOT_FOUND_ACTION_FORMAT = "not found action: %s";
     String INCORRECT_FILE = "Incorrect file: ";
-    String INCORRECT_INPUT = "Incorrect args!";
     String APPLICATION_CLOSED = "application closed";
 }

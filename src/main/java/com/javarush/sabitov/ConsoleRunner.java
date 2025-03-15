@@ -1,7 +1,6 @@
 package com.javarush.sabitov;
 
 import com.javarush.sabitov.controllers.MainController;
-import com.javarush.sabitov.entity.Result;
 import com.javarush.sabitov.view.ConsoleApplication;
 import com.javarush.sabitov.view.Menu;
 
